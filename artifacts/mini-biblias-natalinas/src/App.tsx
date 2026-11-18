@@ -15,10 +15,11 @@ import {
 
 const queryClient = new QueryClient();
 
-// Configure os dois links de checkout aqui. Mantenha a string vazia até ter o link real.
+// Configure os links de checkout aqui. Mantenha vazios até ter os links reais.
 const CHECKOUT_LINKS = {
   basic: '',
   complete: '',
+  upgrade17: '',
 };
 
 const bonuses = [
@@ -63,7 +64,7 @@ function CheckoutAction({
   children,
   className,
 }: {
-  tier: 'basic' | 'complete';
+  tier: 'basic' | 'complete' | 'upgrade17';
   children: ReactNode;
   className: string;
 }) {
@@ -112,6 +113,8 @@ function CheckoutAction({
 }
 
 function Home() {
+  const [upsellOpen, setUpsellOpen] = useState(false);
+
   useEffect(() => {
     document.title = 'Mini Bíblias Natalinas para imprimir | Um Natal de fé';
     const description = 'Celebre o Natal cristão com mini Bíblias para imprimir, mensagens sobre o nascimento de Jesus e sete bônus especiais.';
@@ -213,7 +216,14 @@ function Home() {
                 <li>Mini Bíblias Natalinas</li>
                 <li>Material digital para imprimir</li>
               </ul>
-              <CheckoutAction tier="basic" className="button-secondary">QUERO ESSA OFERTA</CheckoutAction>
+              <button
+                type="button"
+                className="button-secondary"
+                data-testid="button-open-upsell"
+                onClick={() => setUpsellOpen(true)}
+              >
+                QUERO ESSA OFERTA
+              </button>
             </article>
             <article className="price-card complete">
               <span className="recommended">Oferta completa</span>
@@ -230,6 +240,53 @@ function Home() {
               <CheckoutAction tier="complete" className="button-primary">QUERO A OFERTA COMPLETA</CheckoutAction>
             </article>
           </div>
+          {upsellOpen && (
+            <div
+              className="checkout-notice upsell-overlay"
+              role="presentation"
+              onMouseDown={(event) => {
+                if (event.target === event.currentTarget) setUpsellOpen(false);
+              }}
+            >
+              <section
+                className="upsell-card"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="upsell-title"
+              >
+                <button
+                  className="notice-close"
+                  type="button"
+                  aria-label="Fechar oferta especial"
+                  data-testid="button-close-upsell"
+                  onClick={() => setUpsellOpen(false)}
+                >
+                  <X size={21} aria-hidden="true" />
+                </button>
+                <span className="eyebrow">Uma condição especial</span>
+                <h2 id="upsell-title">Leve a oferta completa por R$17</h2>
+                <p>
+                  Receba as Mini Bíblias Natalinas e os sete bônus por apenas
+                  <strong> R$17 no total.</strong>
+                </p>
+                <ul className="upsell-bonus-list">
+                  {bonuses.map((bonus, index) => (
+                    <li key={bonus.title} data-testid={`upsell-bonus-${index + 1}`}>
+                      {bonus.title}
+                    </li>
+                  ))}
+                </ul>
+                <div className="upsell-actions">
+                  <CheckoutAction tier="upgrade17" className="button-primary">
+                    QUERO A OFERTA COMPLETA POR R$17
+                  </CheckoutAction>
+                  <CheckoutAction tier="basic" className="button-secondary">
+                    NÃO, FICAREI COM A OFERTA DE R$10
+                  </CheckoutAction>
+                </div>
+              </section>
+            </div>
+          )}
           <p className="safe-note">Você verá os detalhes de pagamento na página de checkout.</p>
         </div>
       </section>

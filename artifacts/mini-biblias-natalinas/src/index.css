@@ -470,6 +470,15 @@ h1,h2,h3,p { margin-top:0; }
 .notice-card h2 { font:600 27px var(--app-font-serif); color:#214633; margin:5px 0 10px; }
 .notice-card p { color:#657164; line-height:1.65; }
 .notice-close { position:absolute; right:15px; top:13px; border:0; background:transparent; font-size:24px; color:#667267; cursor:pointer; }
+.upsell-overlay { z-index:30; overflow-y:auto; }
+.upsell-card { width:min(100%,540px); max-height:calc(100vh - 44px); overflow-y:auto; background:#fffaf0; padding:38px; box-shadow:0 22px 60px #14261d66; position:relative; border-top:4px solid #bd9c54; }
+.upsell-card h2 { font:600 clamp(25px,5vw,34px)/1.1 var(--app-font-serif); color:#214633; margin:12px 0 10px; }
+.upsell-card > p { color:#657164; line-height:1.65; }
+.upsell-card > p strong { color:#a83d35; }
+.upsell-bonus-list { list-style:none; margin:18px 0 24px; padding:17px 0; border-top:1px solid #e5ddca; border-bottom:1px solid #e5ddca; display:grid; grid-template-columns:1fr 1fr; gap:12px 18px; color:#425849; font-size:.82rem; }
+.upsell-bonus-list li:before { content:""; width:7px; height:7px; display:inline-block; border-radius:50%; background:#bd9c54; margin-right:9px; }
+.upsell-actions { display:grid; gap:10px; }
+.upsell-actions .button-primary,.upsell-actions .button-secondary { width:100%; min-height:52px; text-align:center; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 @keyframes rise-in { from { opacity:0; transform:translateY(13px); } to { opacity:1; transform:translateY(0); } }
 .hero-copy,.hero-art { animation:rise-in .75s ease-out both; }
@@ -512,6 +521,8 @@ h1,h2,h3,p { margin-top:0; }
  .guarantee h2 { font-size:26px; }
  .faq-item summary { font-size:16px; }
  .notice-card { padding:30px 24px; }
+  .upsell-card { padding:30px 23px 23px; }
+  .upsell-bonus-list { grid-template-columns:1fr; gap:10px; }
 }
 @media (prefers-reduced-motion: reduce) {
  html { scroll-behavior:auto; }
