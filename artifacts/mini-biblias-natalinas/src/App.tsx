@@ -159,7 +159,7 @@ function Home() {
             <span className="eyebrow">A história mais bonita do Natal</span>
             <h1 id="hero-title">Um Natal ainda mais especial com lindas <em>Mini Bíblias</em> para imprimir!</h1>
             <p>Encante crianças, familiares e pessoas especiais com mini Bíblias natalinas cheias de mensagens e ensinamentos sobre o nascimento de Jesus.</p>
-            <CheckoutAction tier="complete" className="button-primary">QUERO MINHAS MINI BÍBLIAS 🎄</CheckoutAction>
+            <a href="#ofertas" className="button-primary" data-testid="link-hero-offers">QUERO MINHAS MINI BÍBLIAS 🎄</a>
             <div className="micro-trust">Material digital para imprimir, compartilhar e presentear.</div>
           </div>
           <div className="hero-art" role="img" aria-label="Prévia ilustrada das Mini Bíblias Natalinas e de uma página interna">
