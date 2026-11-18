@@ -264,8 +264,9 @@ function Home() {
               <div className="price-divider" />
               <ul className="price-includes">
                 <li>Mini Bíblias Natalinas</li>
-                <li>Os sete bônus listados acima</li>
-                <li>Mais materiais para celebrar e compartilhar</li>
+                {bonuses.map((bonus) => (
+                  <li key={bonus.title}>{bonus.title}</li>
+                ))}
               </ul>
               <CheckoutAction tier="complete" className="button-primary">QUERO A OFERTA COMPLETA</CheckoutAction>
             </article>
