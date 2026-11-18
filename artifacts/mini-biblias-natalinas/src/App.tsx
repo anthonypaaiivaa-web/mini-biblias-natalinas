@@ -17,9 +17,9 @@ const queryClient = new QueryClient();
 
 // Configure os links de checkout aqui. Mantenha vazios até ter os links reais.
 const CHECKOUT_LINKS = {
-  basic: '',
-  complete: '',
-  upgrade17: '',
+  basic: 'https://pay.lowify.com.br/checkout?product_id=p3G3Ec',
+  complete: 'https://pay.lowify.com.br/checkout?product_id=xsDHQR',
+  upgrade17: 'https://pay.lowify.com.br/checkout?product_id=BkBRms',
 };
 
 const bonuses = [
