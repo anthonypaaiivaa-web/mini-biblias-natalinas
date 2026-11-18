@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import { ShieldCheck, Star, X } from 'lucide-react';
+import productMockup from '@assets/Mini_Bíblias_Natalinas_para_Imprimir_1794977596812.png';
 import {
   Route,
   Switch,
@@ -162,36 +163,13 @@ function Home() {
             <a href="#ofertas" className="button-primary" data-testid="link-hero-offers">QUERO MINHAS MINI BÍBLIAS 🎄</a>
             <div className="micro-trust">Material digital para imprimir, compartilhar e presentear.</div>
           </div>
-          <div className="hero-art" role="img" aria-label="Prévia ilustrada das Mini Bíblias Natalinas e de uma página interna">
-            <div className="book-scene">
-              <div className="book book-main">
-                <div className="book-spine" />
-                <div className="cover-art">
-                  <span className="cover-kicker">Uma história de amor</span>
-                  <NativityArt className="nativity" />
-                  <span className="cover-title">Mini Bíblia<br />de Natal</span>
-                  <span className="cover-sub">O nascimento de Jesus</span>
-                  <span className="cover-star"><Star size={17} aria-hidden="true" /></span>
-                </div>
-              </div>
-              <div className="book book-side">
-                <div className="book-spine" />
-                <div className="cover-art">
-                  <span className="cover-kicker">Uma noite especial</span>
-                  <NativityArt className="nativity" />
-                  <span className="cover-title">A luz<br />do mundo</span>
-                  <span className="cover-sub">Uma mensagem de esperança</span>
-                  <span className="cover-star"><Star size={17} aria-hidden="true" /></span>
-                </div>
-              </div>
-              <div className="floating-page">
-                <span className="cover-kicker">A promessa se cumpriu</span>
-                <div className="page-heading">Nasceu Jesus</div>
-                <NativityArt className="page-nativity" />
-                <div className="page-lines" /><div className="page-lines" /><div className="page-lines short" />
-              </div>
-              <span className="art-label">Uma lembrança de fé, feita por você</span>
-            </div>
+          <div className="hero-art">
+            <img
+              className="hero-product-image"
+              src={productMockup}
+              alt="Mockup das Mini Bíblias Natalinas para imprimir, com capas e páginas internas."
+              data-testid="img-product-mockup"
+            />
           </div>
         </div>
         <a className="sr-only" href="#conteudo">Pular para o conteúdo</a>
