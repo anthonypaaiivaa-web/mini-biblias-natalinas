@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Mini Bíblias Natalinas"
+description = "Página de vendas em português para um kit digital de mini Bíblias natalinas para imprimir, com ofertas, bônus, garantia e perguntas frequentes."
+version = "1.0.0"
+id = "artifacts/mini-biblias-natalinas"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23926
+
+[services.development]
+run = "pnpm --filter @workspace/mini-biblias-natalinas run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mini-biblias-natalinas", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mini-biblias-natalinas/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23926"
+BASE_PATH = "/"
