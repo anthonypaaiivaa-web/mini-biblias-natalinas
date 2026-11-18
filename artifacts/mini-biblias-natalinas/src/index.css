@@ -402,29 +402,7 @@ h1,h2,h3,p { margin-top:0; }
 .button-primary:hover { transform:translateY(-2px); background:#8d332d; }
 .micro-trust { margin-top:15px; color:#7b8376; font-size:.73rem; }
 .hero-art { min-height:480px; display:grid; place-items:center; position:relative; }
-.hero-art:before,.hero-art:after { content:none; }
 .hero-product-image { display:block; position:relative; z-index:1; width:min(90%,450px); aspect-ratio:1; object-fit:contain; border-radius:4px; filter:drop-shadow(0 16px 24px #26372b26); }
-.book-scene { width:min(100%,560px); height:440px; position:relative; z-index:1; }
-.book { position:absolute; width:216px; height:300px; border-radius:5px 12px 12px 5px; box-shadow:14px 18px 32px #26372b33; overflow:hidden; }
-.book-main { left:27%; top:50px; transform:rotate(-8deg); z-index:2; background:#f9f0db; border:5px solid #f8f1df; }
-.book-side { left:59%; top:96px; transform:rotate(8deg); background:#31553d; border:5px solid #f8f1df; }
-.book-spine { position:absolute; left:0; top:0; bottom:0; width:17px; background:#eee0bc; border-right:1px solid #d4c39a; }
-.cover-art { position:absolute; inset:13px 12px 13px 22px; border:1px solid #c9aa60; display:flex; align-items:center; flex-direction:column; text-align:center; padding:22px 12px; }
-.book-side .cover-art { border-color:#b8a76e; }
-.cover-kicker { font-size:7px; letter-spacing:.21em; color:#8b7647; text-transform:uppercase; }
-.cover-title { font-family:var(--app-font-serif); font-size:24px; line-height:1.04; color:#9c3a32; margin:17px 0 10px; }
-.book-side .cover-title { color:#f4e7c5; font-size:21px; }
-.cover-sub { font-family:var(--app-font-serif); font-style:italic; font-size:10px; color:#54664f; }
-.book-side .cover-sub { color:#d9d0ae; }
-.cover-star { color:#c1a052; font-size:22px; margin-top:auto; }
-.nativity { width:112px; height:96px; margin-top:18px; }
-.book-side .nativity { width:100px; margin-top:14px; }
-.floating-page { position:absolute; right:2%; bottom:27px; transform:rotate(7deg); background:#fffdf6; width:186px; height:240px; box-shadow:0 12px 30px #26372b20; padding:23px 19px; z-index:3; }
-.page-heading { font:600 17px var(--app-font-serif); color:#a83d35; text-align:center; margin:9px 0 12px; }
-.page-lines { height:5px; margin:9px 0; border-radius:3px; background:#ddd5c2; }
-.page-lines.short { width:65%; margin-left:auto; margin-right:auto; }
-.page-nativity { width:72px; height:65px; display:block; margin:auto; }
-.art-label { position:absolute; left:0; bottom:20px; font:italic 14px var(--app-font-serif); color:#6a775f; }
 .section { padding:94px max(6vw,22px); }
 .section-inner { max-width:1120px; margin:auto; }
 .section-heading { max-width:650px; margin:0 auto 48px; text-align:center; }
@@ -440,21 +418,6 @@ h1,h2,h3,p { margin-top:0; }
 .benefit-item .number { color:#b48d3e; font:500 12px var(--app-font-mono); letter-spacing:.14em; }
 .benefit-item h3 { font:600 18px var(--app-font-serif); color:#254734; margin:12px 0 5px; }
 .benefit-item p { color:#727b6f; font-size:.82rem; line-height:1.55; margin:0; }
-.preview { background:#e9e4d5; position:relative; }
-.preview:before { content:""; position:absolute; width:270px; height:270px; border:1px solid #c5b580; border-radius:50%; top:45px; right:-120px; }
-.preview-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:6vw; }
-.preview-copy h2 { font:600 clamp(2.3rem,4vw,3.7rem)/1.03 var(--app-font-serif); color:#214633; letter-spacing:-.035em; margin:17px 0; }
-.preview-copy p { color:#627065; line-height:1.75; max-width:430px; }
-.preview-note { color:#a83d35; font-size:.73rem; text-transform:uppercase; letter-spacing:.11em; font-weight:700; margin-top:25px; }
-.open-pages { position:relative; height:360px; display:flex; justify-content:center; align-items:center; }
-.open-pages:before { content:""; position:absolute; width:370px; height:220px; border-radius:50%; background:#d5c9ab; }
-.open-leaf { position:relative; width:203px; height:270px; background:#fffdf6; box-shadow:0 16px 28px #46503d25; padding:25px 22px; }
-.open-leaf.left { transform:rotate(-7deg); border-radius:4px 0 0 4px; border-right:1px solid #e4dece; }
-.open-leaf.right { transform:rotate(7deg); border-radius:0 4px 4px 0; }
-.open-leaf h3 { font:600 19px var(--app-font-serif); color:#a83d35; text-align:center; }
-.open-leaf p { font:italic 13px/1.5 var(--app-font-serif); color:#586a55; text-align:center; }
-.open-leaf .page-lines { height:4px; }
-.open-leaf .nativity { width:100px; margin:18px auto 8px; display:block; }
 .bonus { background:#f7f2e6; }
 .bonus-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:13px; }
 .bonus-card { padding:21px 18px 19px; min-height:150px; background:#fffaf0; border:1px solid #e7ddc7; position:relative; overflow:hidden; }
@@ -519,12 +482,8 @@ h1,h2,h3,p { margin-top:0; }
  .hero h1 { margin-left:auto; margin-right:auto; max-width:700px; font-size:clamp(2.7rem,8vw,4.5rem); }
  .hero-copy>p { margin-left:auto; margin-right:auto; }
  .hero-art { min-height:400px; }
- .book-scene { transform:scale(.88); }
- .benefit-layout,.preview-grid { grid-template-columns:1fr; }
+ .benefit-layout { grid-template-columns:1fr; }
  .benefit-quote { max-width:600px; margin:0 auto; }
- .preview-copy { text-align:center; }
- .preview-copy p { margin:0 auto; }
- .preview-copy .eyebrow { justify-content:center; }
  .bonus-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:560px) {
@@ -536,14 +495,12 @@ h1,h2,h3,p { margin-top:0; }
  .hero-copy>p { font-size:.93rem; }
  .button-primary { width:100%; padding:0 12px; font-size:.7rem; }
  .hero-art { min-height:332px; margin:0 -15px; }
- .book-scene { transform:scale(.7); transform-origin:center; width:540px; max-width:calc(100vw - 30px); }
  .section { padding:68px 20px; }
  .section-heading { margin-bottom:34px; }
  .section-heading h2 { font-size:2.45rem; }
  .benefit-list { grid-template-columns:1fr; gap:9px; }
  .benefit-item { min-height:unset; padding:17px; }
  .benefit-item h3 { margin:8px 0 4px; }
- .open-pages { height:290px; transform:scale(.8); margin:-20px -35px; }
  .bonus-grid { grid-template-columns:1fr 1fr; gap:8px; }
  .bonus-card { min-height:132px; padding:16px 13px; }
  .bonus-card h3 { font-size:15px; margin-top:13px; }

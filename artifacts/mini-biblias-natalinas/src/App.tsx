@@ -4,7 +4,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
-import { ShieldCheck, Star, X } from 'lucide-react';
+import { ShieldCheck, X } from 'lucide-react';
 import productMockup from '@assets/Mini_Bíblias_Natalinas_para_Imprimir_1794977596812.png';
 import {
   Route,
@@ -57,21 +57,6 @@ const questions = [
     answer: 'Sim. Por ser digital, você pode acessar o material em um celular ou outro dispositivo compatível. Para imprimir, use uma impressora disponível.',
   },
 ];
-
-function NativityArt({ className = '' }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 140 120" fill="none" aria-hidden="true">
-      <path d="M25 76 70 34l45 42" stroke="#B4934C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M34 72v33h72V72" fill="#DCC99C" />
-      <path d="M70 22c1.8 4.3 4.4 6.9 8.8 8.7-4.4 1.8-7 4.5-8.8 8.8-1.8-4.3-4.5-7-8.8-8.8 4.3-1.8 7-4.4 8.8-8.7Z" fill="#C1A258" />
-      <path d="M52 72c0-9.2 7.3-16.5 16.5-16.5S85 62.8 85 72v12H52V72Z" fill="#F6EBD2" />
-      <circle cx="68.5" cy="52" r="8" fill="#BD8A65" />
-      <path d="M43 101c6-11 14.6-16.5 25.7-16.5s20.4 5.5 28.3 16.5H43Z" fill="#A83D35" />
-      <path d="M52 85c-12.1-1.4-19 4-22.2 14.8h27.4M84 85c11.4-1.4 18.3 4 22 14.8H80" stroke="#557451" strokeWidth="6" strokeLinecap="round" />
-      <path d="m20 104 4-5m94 5-4-5" stroke="#B4934C" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 function CheckoutAction({
   tier,
@@ -187,32 +172,6 @@ function Home() {
             <article className="benefit-item"><span className="number">02 / DIGITAL</span><h3>Acesso fácil</h3><p>Conteúdo digital para acessar e imprimir quando quiser.</p></article>
             <article className="benefit-item"><span className="number">03 / ESPECIAL</span><h3>Conteúdo de Natal</h3><p>Mensagens e ensinamentos para tornar a data ainda mais significativa.</p></article>
             <article className="benefit-item"><span className="number">04 / PARA PARTILHAR</span><h3>Feito para estar junto</h3><p>Ideal para presentear, compartilhar ou incluir nas atividades natalinas.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section preview" aria-labelledby="preview-title">
-        <div className="section-inner preview-grid">
-          <div className="preview-copy">
-            <span className="eyebrow">Um pedacinho da história</span>
-            <h2 id="preview-title">Uma leitura pequena. Um significado imenso.</h2>
-            <p>Capas delicadas e páginas pensadas para aproximar crianças e adultos da mensagem central do Natal cristão, com ternura e simplicidade.</p>
-            <div className="preview-note">Exemplos visuais do material</div>
-          </div>
-          <div className="open-pages" role="img" aria-label="Exemplo ilustrativo de duas páginas internas do material">
-            <article className="open-leaf left">
-              <span className="cover-kicker">Capítulo 01</span>
-              <h3>Uma grande notícia</h3>
-              <p>Uma promessa de esperança florescia naquela noite tão especial.</p>
-              <div className="page-lines" /><div className="page-lines" /><div className="page-lines short" />
-              <div className="page-lines" /><div className="page-lines short" />
-            </article>
-            <article className="open-leaf right">
-              <span className="cover-kicker">A noite de Natal</span>
-              <NativityArt className="nativity" />
-              <h3>Nasceu o Salvador</h3>
-              <p>Uma história de amor para contar e recordar.</p>
-            </article>
           </div>
         </div>
       </section>
