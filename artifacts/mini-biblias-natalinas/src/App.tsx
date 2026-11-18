@@ -4,7 +4,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
-import { BookOpen, ShieldCheck, Star, X } from 'lucide-react';
+import { ShieldCheck, Star, X } from 'lucide-react';
 import {
   Route,
   Switch,
@@ -154,10 +154,6 @@ function Home() {
     <main className="site-shell">
       <div className="offer-ribbon">🎄 OFERTA ESPECIAL DE NATAL — SOMENTE HOJE!</div>
       <section className="hero" aria-labelledby="hero-title">
-        <div className="topline">
-          <div className="brand"><span className="brand-mark" aria-hidden="true"><BookOpen size={17} /></span><span>Pequenos gestos, grande fé</span></div>
-          <span className="top-note">Um Natal para guardar no coração</span>
-        </div>
         <div className="hero-grid">
           <div className="hero-copy">
             <span className="eyebrow">A história mais bonita do Natal</span>

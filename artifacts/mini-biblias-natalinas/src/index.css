@@ -390,10 +390,6 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px soli
 .offer-ribbon { background: #a83d35; color: #fff8e9; text-align: center; padding: 11px 16px; font-size: .72rem; font-weight: 700; letter-spacing: .15em; }
 .hero { position: relative; background: #f4eddd; min-height: 650px; padding: 26px max(6vw, 22px) 72px; }
 .hero:before { content:""; position:absolute; inset:0; opacity:.22; pointer-events:none; background-image: radial-gradient(#b4a474 0.65px, transparent .65px); background-size: 19px 19px; mask-image: linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent); }
-.topline { position:relative; z-index:1; max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; }
-.brand { display:flex; align-items:center; gap:11px; color:#214a36; font-family:var(--app-font-serif); font-size:1.04rem; font-weight:600; }
-.brand-mark { width:34px; height:34px; border:1px solid #c4a65e; display:grid; place-items:center; border-radius:50%; color:#a83d35; font-size:1.2rem; }
-.top-note { font-size:.7rem; letter-spacing:.13em; text-transform:uppercase; color:#667568; }
 .hero-grid { position:relative; z-index:1; max-width:1200px; margin:54px auto 0; display:grid; grid-template-columns: .93fr 1.07fr; align-items:center; gap:28px; }
 .hero-copy { padding:20px 0 16px; }
 .eyebrow { text-transform:uppercase; letter-spacing:.19em; color:#a83d35; font-size:.68rem; font-weight:700; display:flex; align-items:center; gap:10px; }
@@ -533,8 +529,6 @@ h1,h2,h3,p { margin-top:0; }
 }
 @media (max-width:560px) {
  .offer-ribbon { font-size:.59rem; letter-spacing:.1em; padding:10px 8px; }
- .topline { justify-content:center; }
- .top-note { display:none; }
  .hero { padding-left:19px; padding-right:19px; min-height:unset; }
  .hero-grid,.hero-copy,.hero-art { min-width:0; width:100%; }
  .hero-grid { margin-top:25px; }
