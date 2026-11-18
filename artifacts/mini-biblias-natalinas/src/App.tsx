@@ -239,7 +239,7 @@ function Home() {
           <div className="seal" aria-hidden="true"><ShieldCheck size={28} /><span>COMPRA<br />SEGURA</span></div>
           <div>
             <h2 id="guarantee-title">Compre com tranquilidade</h2>
-            <p>O prazo de garantia será informado aqui: <strong>INSERIR PRAZO</strong>. Consulte as condições completas na página de checkout antes de finalizar sua compra.</p>
+            <p>Você tem 7 dias de garantia. Consulte as condições completas na página de checkout antes de finalizar sua compra.</p>
           </div>
         </div>
       </section>
